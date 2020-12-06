@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :reviews
+  resources :users
   get '/blogs', to: 'blogs#index'
   post '/blogs', to: 'blogs#create'
   get '/blogs/new', to: 'blogs#new'
