@@ -1,5 +1,11 @@
 new items form
 
+<% if @blog.errors.any? %>
+    <% @blog.errors.full_messages.each do |mess|%>
+        <li style="color: red"><%= mess %></li>
+    <% end %>
+<% end %><br>
+
 <%= form_for @blog do |f|%>
     <%= f.label :title %>
     <%= f.text_field :title %> 
