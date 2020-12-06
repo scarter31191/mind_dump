@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root to: 'application#home'
+
   resources :reviews
   resources :users, except: [:new]
   resources :blogs
