@@ -5,15 +5,16 @@ Rails.application.routes.draw do
   resources :reviews
   resources :users, except: [:new]
   resources :blogs
+  # resources :sessions, only: [:new, :create, :destroy]
 
   #signing up
   get '/signup', to: 'users#new'
 
 
   # logging in
-  get '/login', to: 'sessions#new'
-  post '/login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/login', to: 'sessions#login', as: :login
+  post '/login', to: 'sessions#logged_in', as: :logged_in
+  delete '/logout', to: 'sessions#logout', as: :logout
 
 
 

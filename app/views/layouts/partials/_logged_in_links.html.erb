@@ -1,0 +1,7 @@
+<div class=“links”>
+    <%= link_to "Log Out", logout_path, method: :logout %> |
+    <%= link_to "Home", user_path(@user.id), method: :show %> |
+    <%= link_to "My Blogs", user_blogs_path(@user.id) %> |
+    <%= link_to "Categories", categories_path(@user.id) %> |
+    <%# link_to “Home”, user_path(current_user)%>
+</div>
