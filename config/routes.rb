@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root to: 'application#home'
 
-  resources :reviews
+  resources :reviews, except: [:index]
   resources :users, except: [:new]
   resources :blogs
   # resources :sessions, only: [:new, :create, :destroy]
